@@ -2,6 +2,7 @@ import React from "react";
 import ImageSlider from "./ImageSlider";
 import { SliderData } from "./SliderData";
 
+
 function About() {
     return <div className="about">
         <h1>About Us</h1>
