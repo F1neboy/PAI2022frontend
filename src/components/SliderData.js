@@ -1,0 +1,22 @@
+export const SliderData = [
+    {
+      image:
+        'https://images.unsplash.com/photo-1546768292-fb12f6c92568?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+    },
+    {
+      image:
+        'https://zagrano.pl/wp-content/uploads/2020/09/Project-Cars-3.jpg'
+    },
+    {
+      image:
+        'https://stimg.cardekho.com/images/carexteriorimages/930x620/Lamborghini/Aventador/6721/Lamborghini-Aventador-SVJ/1621849426405/front-left-side-47.jpg'
+    },
+    {
+      image:
+        'https://carconfigurator.ferrari.com/assets/cars/portofinom/packages/default/car-ferrari-portofino-m_splash.jpg'
+    },
+    {
+      image:
+        'https://ichef.bbci.co.uk/news/976/cpsprodpb/118A0/production/_118604817__116721094_mustang.jpg'
+    }
+  ];
