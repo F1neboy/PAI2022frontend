@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
+.body_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_page {
+  width: 1000px;
+  border-radius: 20px;
+  margin: 30px;
+}
+
+.nav_bar {
+  font-family: 'Sora', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.button_oferta{
+  width: 150px;
+  border-radius: 5px;
+  background: #0074ff;
+  padding: 10px 22px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  text-align: center;
+  margin-right: 24px;
+}
+
+.button_oferta:hover {
+  transition: all 0.2s ease-in-out;
+  background: #a6cdff;
+  color: #2d2300;
+}

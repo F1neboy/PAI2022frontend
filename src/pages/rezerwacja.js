@@ -2,7 +2,11 @@ import React from 'react'
 
 const Rezerwacja = () => {
   return (
-    <div>Rezerwacja</div>
+    <div className="body_page">
+      <div className="content_page">
+        <h1>Rezerwacja</h1>
+      </div>
+    </div>
   )
 }
 
