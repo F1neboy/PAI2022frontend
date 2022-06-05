@@ -19,7 +19,7 @@ const Contact = () => {
           <ContactInfoItem text="Kaliskiego 7, 85-796 Bydgoszcz" />
         </div>
 
-        <div className='contactForm'>
+        <div className='nextSection'>
           <ContactForm />
         </div>
         

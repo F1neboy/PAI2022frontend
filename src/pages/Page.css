@@ -41,6 +41,13 @@
   color: #2d2300;
 }
 
-.contactForm{
+.nextSection{
   margin-top: 100px;
+}
+
+.carGallery{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }

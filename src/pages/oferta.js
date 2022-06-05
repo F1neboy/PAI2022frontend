@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import CarCard from '../components/car/CarCard';
 import NajemDlugoterminowy from '../components/najem/NajemDlugoterminowy'
 import NajemKrotkoterminowy from '../components/najem/NajemKrotkoterminowy'
 import './Page.css';
@@ -38,6 +39,24 @@ const Oferta = () => {
           {showDivKrotko && (
             <NajemKrotkoterminowy />
           )}
+          
+        </div>
+
+        <div className='nextSection'>
+          <h1>Flota</h1>
+          <div className='carGallery'>
+            <CarCard 
+              availability={false}
+              title='passat b5'
+              price='300.00'
+              img='img passata'
+            />
+            <CarCard />
+            <CarCard />
+            <CarCard />
+            <CarCard />
+            <CarCard />
+          </div>
           
         </div>
 
