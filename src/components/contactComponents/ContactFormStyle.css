@@ -1,0 +1,50 @@
+  .form-group {
+    width: 60%;
+    margin-bottom: 10px;
+  }
+
+  label {
+    font-size: 20px;
+
+  }
+
+  input {
+    width: 50%; 
+  }
+
+  textarea{
+    width: 100%;
+  }
+
+  input, textarea {
+    font-size: 20px;
+    padding: 10px;
+    outline: none;
+    border-radius: 8px;
+    border: black 2px solid;
+    background-color: rgb(238, 229, 229);
+
+  }
+
+  textarea {
+    min-height: 250px;
+    resize: vertical;
+  }
+
+  button[type='submit'] {
+    font-size: 24px;
+    color: #fff;
+    background-color: #256ce1;
+    display: inline-block;
+    outline: none;
+    padding: 10px 40px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  button[type='submit']:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+  }
+  
