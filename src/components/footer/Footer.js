@@ -1,9 +1,11 @@
 import React from 'react'
 import './FooterStyle.css'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faYoutube, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 function Footer() {
+
   return (
     <div className="main-footer">
       <div className="container">
@@ -30,10 +32,9 @@ function Footer() {
           <div className="col">
             <h4>Social media</h4>
             <ui className="list-unstyled">
-              <li>FaceBook</li>
-              <li>OTHER STUFF</li>
-              <li>GUD STUFF</li>
-              <FontAwesomeIcon icon={faCoffee} />
+              <a href='https://www.youtube.com'><FontAwesomeIcon icon={faYoutube} /> youtube</a><br />
+              <a href='https://www.instagram.com'><FontAwesomeIcon icon={faInstagram} /> instagram</a><br />
+              <a href='https://twitter.com'><FontAwesomeIcon icon={faTwitter} /> twitter</a><br />
             </ui>
           </div>
         </div>
