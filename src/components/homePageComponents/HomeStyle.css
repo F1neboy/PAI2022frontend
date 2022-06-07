@@ -1,0 +1,59 @@
+.bodySection {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.contenerSection2 {
+    width: 100%;
+}
+
+.left {
+    width: 69%;
+    float: left;
+    padding-right: 10px;
+}
+
+.right {
+    width: 30%;
+    float: left;
+}
+
+.carimg {
+    width: 300px;
+    
+}
+
+.contenerSection3{
+    margin-top: 100px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.rowSection {
+    width: 25%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rowIcon {
+    height: 75px;
+    width: 100%;
+    text-align: center;
+}
+
+.rowContent {
+    text-align: center;
+    width: 40%;
+    height: 125px;
+}
+
+.icon {
+    font-size: 50px;
+    color: #256ce1;
+}
