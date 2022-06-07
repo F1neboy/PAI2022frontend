@@ -9,21 +9,30 @@ import Rezerwacja from './pages/rezerwacja'
 import Contact from './pages/contact'
 import Login from './pages/Login'
 import Register from './pages/reigster'
+import Footer from './components/footer/Footer'
+
 
 function App() {
 	return (
-		<Router>
-			<Navbar />
-			<Routes>
-				<Route path='/' exact element={<Home />} />
-				<Route path='/oferta' exact element={<Oferta />} />
-				<Route path='/rezerwacaja' exact element={<Rezerwacja />} />
-				<Route path='/about' exact element={<AboutUs />} />
-				<Route path='/contact-us' exact element={<Contact />} />
-				<Route path='/login' exact element={<Login />} />
-				<Route path='/register' exact element={<Register />} />
-			</Routes>
-		</Router>
+		<div>
+
+			<Router>
+				<Navbar />
+				<Routes>
+					<Route path='/' exact element={<Home />} />
+					<Route path='/oferta' exact element={<Oferta />} />
+					<Route path='/rezerwacaja' exact element={<Rezerwacja />} />
+					<Route path='/about' exact element={<AboutUs />} />
+					<Route path='/contact-us' exact element={<Contact />} />
+					<Route path='/login' exact element={<Login />} />
+					<Route path='/register' exact element={<Register />} />
+				</Routes>
+			</Router>
+
+			<Footer />
+
+		</div>
+		
 	)
 }
 

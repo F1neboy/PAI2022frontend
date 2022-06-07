@@ -1,0 +1,16 @@
+.container {
+    width: 100%;
+    background: #000;
+    color: #fff;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.row-down {
+    display: flex;
+    justify-content: center;
+}

@@ -7,6 +7,7 @@ const ContactForm = () => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [topic, setTopic] = useState('');
     const [message, setMessage] = useState('');
 
   return (
@@ -36,6 +37,19 @@ const ContactForm = () => {
                         placeholder='E-mail'
                         value={email} 
                         onChange={(e) => setEmail(e.target.value)}
+                    />
+                </label>
+            </div>
+
+            <div className='form-group'>
+                <label htmlFor='topic'>
+                    <input 
+                        type='text' 
+                        id='topic' 
+                        name='topic' 
+                        placeholder='Temat'
+                        value={topic} 
+                        onChange={(e) => setTopic(e.target.value)}
                     />
                 </label>
             </div>
