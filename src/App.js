@@ -10,12 +10,11 @@ import Contact from './pages/contact'
 import Login from './pages/Login'
 import Register from './pages/reigster'
 import Footer from './components/footer/Footer'
-
+import ProfilPage from './pages/ProfilPage'
 
 function App() {
 	return (
 		<div>
-
 			<Router>
 				<Navbar />
 				<Routes>
@@ -26,13 +25,12 @@ function App() {
 					<Route path='/contact-us' exact element={<Contact />} />
 					<Route path='/login' exact element={<Login />} />
 					<Route path='/register' exact element={<Register />} />
+					<Route path='/profil' exact element={<ProfilPage />} />
 				</Routes>
 			</Router>
 
 			<Footer />
-
 		</div>
-		
 	)
 }
 
