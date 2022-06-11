@@ -19,15 +19,15 @@ const Navbar = () => {
 					</NavLink>
 
 					<NavLink to='/about' activeStyle>
-						About Us
+						O nas
 					</NavLink>
 
 					<NavLink to='/contact-us' activeStyle>
-						Contact Us
+						Kontakt
 					</NavLink>
 				</NavMenu>
 				<NavBtn>
-					<NavBtnLink to='/login'>Sign In</NavBtnLink>
+					<NavBtnLink to='/login'>Zaloguj</NavBtnLink>
 				</NavBtn>
 			</Nav>
 		</>

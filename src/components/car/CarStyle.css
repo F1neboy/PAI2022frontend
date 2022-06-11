@@ -48,7 +48,7 @@
     text-align: center;
 }
 
-button {
+.buttonCarCard {
     font-size: 12px;
     color: #fff;
     background-color: #256ce1;
@@ -61,7 +61,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.buttonCarCard:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
     color: #010606;

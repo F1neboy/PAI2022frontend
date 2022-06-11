@@ -15,7 +15,7 @@ function CarCard({title = 'Title', availability = true, img = 'img', price = '10
                 {price} zł
             </div>
             <div className='footer_right'>
-                <button>Szczegóły</button>
+                <button className='buttonCarCard'>Szczegóły</button>
             </div>
         </div>
     </div>

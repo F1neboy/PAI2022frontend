@@ -24,6 +24,7 @@ const ContactForm = () => {
                         placeholder='Imie'
                         value={name} 
                         onChange={(e) => setName(e.target.value)}
+                        className='inputContactForm'
                     />
                 </label>
             </div>
@@ -37,6 +38,7 @@ const ContactForm = () => {
                         placeholder='E-mail'
                         value={email} 
                         onChange={(e) => setEmail(e.target.value)}
+                        className='inputContactForm'
                     />
                 </label>
             </div>
@@ -50,6 +52,7 @@ const ContactForm = () => {
                         placeholder='Temat'
                         value={topic} 
                         onChange={(e) => setTopic(e.target.value)}
+                        className='inputContactForm'
                     />
                 </label>
             </div>
@@ -67,7 +70,7 @@ const ContactForm = () => {
                 </label>
             </div>
 
-            <button type='submit'>Send</button>
+            <button type='submit' className='buttonFormContact'>Send</button>
 
         </form>
     </div>

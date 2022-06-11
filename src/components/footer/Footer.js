@@ -9,9 +9,9 @@ function Footer() {
   return (
     <div className="main-footer">
       <div className="container">
-        <div className="row">
+        <div className="row-footer">
           {/* Column1 */}
-          <div className="col">
+          <div className="col-footer">
             <h4>Kontakt</h4>
             <ui className="list-unstyled">
               <li>+48 999 999 999</li>
@@ -20,7 +20,7 @@ function Footer() {
             </ui>
           </div>
           {/* Column2 */}
-          <div className="col">
+          <div className="col-footer">
             <h4>Lorem ipsum</h4>
             <ui className="list-unstyled">
               <li>Ipsum lorem</li>
@@ -29,7 +29,7 @@ function Footer() {
             </ui>
           </div>
           {/* Column3 */}
-          <div className="col">
+          <div className="col-footer">
             <h4>Social media</h4>
             <ui className="list-unstyled">
               <a href='https://www.youtube.com'><FontAwesomeIcon icon={faYoutube} /> youtube</a><br />
@@ -39,7 +39,7 @@ function Footer() {
           </div>
         </div>
         <hr />
-        <div className="row-down">
+        <div className="row-footer-down">
           <p className="col-sm">
             &copy;{new Date().getFullYear()} PAI-PROJEKT | All rights reserved |
             Terms Of Service | Privacy

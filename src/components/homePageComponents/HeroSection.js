@@ -1,6 +1,7 @@
 import React from 'react'
 import {HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroP} from './HeroElements'
-import Video from './car.mp4'
+import Video from '../../assets/videos/car.mp4'
+
 
 function HeroSection() {
   return (
@@ -9,7 +10,7 @@ function HeroSection() {
             <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
         </HeroBg>
         <HeroContent>
-            <HeroH1>Wypożyczalnia samochodów</HeroH1>
+            <HeroH1>Wypożyczalnia samochodów PAI</HeroH1>
             <HeroP>Mamy dla Ciebie samochód</HeroP>
         </HeroContent>
     </HeroContainer>

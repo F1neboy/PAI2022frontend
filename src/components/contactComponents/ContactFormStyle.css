@@ -8,7 +8,7 @@
 
   }
 
-  input {
+  .inputContactForm {
     width: 50%; 
   }
 
@@ -16,7 +16,7 @@
     width: 100%;
   }
 
-  input, textarea {
+  .inputContactForm, textarea {
     font-size: 20px;
     padding: 10px;
     outline: none;
@@ -31,7 +31,7 @@
     resize: vertical;
   }
 
-  button[type='submit'] {
+  .buttonFormContact {
     font-size: 24px;
     color: #fff;
     background-color: #256ce1;
@@ -42,7 +42,7 @@
     cursor: pointer;
   }
 
-  button[type='submit']:hover {
+  .buttonFormContact:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
     color: #010606;

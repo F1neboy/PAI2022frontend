@@ -4,13 +4,13 @@
     color: #fff;
 }
 
-.row {
+.row-footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
-.row-down {
+.row-footer-down {
     display: flex;
     justify-content: center;
     color: rgb(143, 142, 142);
@@ -19,4 +19,8 @@
 a {
     text-decoration: none;
     color: #fff;
+}
+
+.col-footer {
+    width: 250px;
 }
