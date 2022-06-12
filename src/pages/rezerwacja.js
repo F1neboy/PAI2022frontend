@@ -1,10 +1,11 @@
 import React from 'react'
+import FormSearch from '../components/formSearchCar/FormSearch'
 
 const Rezerwacja = () => {
 	return (
 		<div className='body_page'>
 			<div className='content_page'>
-				<h1>Rezerwacja</h1>
+				<FormSearch />
 			</div>
 		</div>
 	)
