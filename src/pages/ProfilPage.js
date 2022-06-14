@@ -41,6 +41,7 @@ const ProfilPage = () => {
 				<button class='form__button__login' type='submit'>
 					Zapisz
 				</button>
+				
 			</form>
 		</div>
 	)

@@ -90,10 +90,10 @@
 	font-size: 1.1rem;
 	color: #256ce1;
 	border: none;
-	border-radius: var(--border-radius);
+	/* border-radius: var(--border-radius); */
 	outline: none;
 	cursor: pointer;
-	background: var(--color-primary);
+	/* background: var(--color-primary); */
 }
 
 .form__button__login:hover {
@@ -112,8 +112,10 @@
 	color: var(--color-secondary);
 	text-decoration: none;
 	cursor: pointer;
+	color: #256ce1;
 }
 
 .form__link__login:hover {
 	text-decoration: underline;
+	
 }
