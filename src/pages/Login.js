@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react'
 import './Login.css'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+
 const Login = () => {
 	const errRef = useRef()
 	const [username, setUser] = useState('')
@@ -9,6 +11,8 @@ const Login = () => {
 	const [role, setRole] = useState([])
 
 	const [success, setSuccess] = useState(false)
+
+	const navigate = useNavigate()
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
@@ -21,6 +25,7 @@ const Login = () => {
 				setpassword('')
 				setSuccess(true)
 				setRole(res.data.loggedEmployeeId)
+				localStorage.setItem("user", JSON.stringify(res.data))
 			})
 			.catch((err) => {
 				if (err.response) {
@@ -37,8 +42,12 @@ const Login = () => {
 	}
 	return (
 		<>
-			{success ? (
-				<section>{role === null ? console.log('tak') : console.log('nie')}</section>
+			{success ? ( 
+				/* <section>{role === null ?  console.log('tak') : console.log('nie')}</section> */
+				<section>
+					{navigate('/')}
+					{window.location.reload()}
+				</section>
 			) : (
 				<section className='login_page_body'>
 					<div class='container__Login'>

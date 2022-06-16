@@ -11,6 +11,7 @@ import Login from './pages/Login'
 import Register from './pages/reigster'
 import Footer from './components/footer/Footer'
 import ProfilPage from './pages/ProfilPage'
+import LogOut from './pages/LogOut'
 
 function App() {
 	return (
@@ -26,6 +27,7 @@ function App() {
 					<Route path='/login' exact element={<Login />} />
 					<Route path='/register' exact element={<Register />} />
 					<Route path='/profil' exact element={<ProfilPage />} />
+					<Route path='/logout' exact element={<LogOut />} />
 				</Routes>
 			</Router>
 
