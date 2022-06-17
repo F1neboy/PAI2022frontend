@@ -12,6 +12,9 @@ import Register from './pages/reigster'
 import Footer from './components/footer/Footer'
 import ProfilPage from './pages/ProfilPage'
 import LogOut from './pages/LogOut'
+import SettingsPgae from './pages/profilPage/SettingsPgae'
+import UserReservation from './pages/profilPage/UserReservation'
+import UserReservationHistory from './pages/profilPage/UserReservationHistory'
 
 function App() {
 	return (
@@ -28,6 +31,9 @@ function App() {
 					<Route path='/register' exact element={<Register />} />
 					<Route path='/profil' exact element={<ProfilPage />} />
 					<Route path='/logout' exact element={<LogOut />} />
+					<Route path='/setting' exact element={<SettingsPgae />} />
+					<Route path='/userReservation' exact element={<UserReservation />} />
+					<Route path='/userReservationHistory' exact element={<UserReservationHistory />} />
 				</Routes>
 			</Router>
 
