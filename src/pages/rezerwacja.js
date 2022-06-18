@@ -7,7 +7,7 @@ const Rezerwacja = () => {
 	const auth = localStorage.getItem('user')
 	
 	const wyloguj = () => {
-        localStorage.removeItem("user")
+		
     }
 
 	return (
@@ -20,7 +20,7 @@ const Rezerwacja = () => {
 			}
 
 			<button onClick={wyloguj}>
-				logout
+				click
 			</button>
 			
 		</div>

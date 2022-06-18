@@ -31,7 +31,7 @@ const Navbar = () => {
 
 					{ auth ? (
 						<NavLink to='/profil' activeStyle>
-							Profil
+							Panel
 						</NavLink>) : 
 						(<></>)
 				}
