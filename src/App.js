@@ -15,6 +15,10 @@ import LogOut from './pages/LogOut'
 import SettingsPgae from './pages/profilPage/SettingsPgae'
 import UserReservation from './pages/profilPage/UserReservation'
 import UserReservationHistory from './pages/profilPage/UserReservationHistory'
+import AddCarPage from './pages/progilPageAdmin/AddCarPage'
+import Wypozyczone from './pages/progilPageAdmin/Wypozyczone'
+import Uzytkownicy from './pages/progilPageAdmin/Uzytkownicy'
+import SettingsPgaeAdmin from './pages/progilPageAdmin/SettingsPgaeAdmin'
 
 function App() {
 	return (
@@ -32,8 +36,12 @@ function App() {
 					<Route path='/profil' exact element={<ProfilPage />} />
 					<Route path='/logout' exact element={<LogOut />} />
 					<Route path='/setting' exact element={<SettingsPgae />} />
+					<Route path='/settingAdmin' exact element={<SettingsPgaeAdmin />} />
 					<Route path='/userReservation' exact element={<UserReservation />} />
 					<Route path='/userReservationHistory' exact element={<UserReservationHistory />} />
+					<Route path='/addcar' exact element={<AddCarPage />} />
+					<Route path='/wypozyczone' exact element={<Wypozyczone />} />
+					<Route path='/uzytkownicy' exact element={<Uzytkownicy />} />
 				</Routes>
 			</Router>
 
