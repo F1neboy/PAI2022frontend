@@ -1,8 +1,10 @@
 import React from 'react'
 import SidebarAdmin from '../../components/sidebar/SidebarAdmin'
 import PersonIcon from '@mui/icons-material/Person';
+import Users from './Users';
 
 function Uzytkownicy() {
+
     return (
         <div class='profilPageBody'>
             <SidebarAdmin />
@@ -11,6 +13,7 @@ function Uzytkownicy() {
                     <PersonIcon />
                     Użytkownicy
                 </div>
+                <Users />
             </div>
         </div>
     )
