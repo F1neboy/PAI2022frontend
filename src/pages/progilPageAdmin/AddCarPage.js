@@ -8,6 +8,7 @@ function AddCarPage() {
     const [model, setModel] = useState('')
     const [brand, setBrand] = useState('')
     const [description, setDescription] = useState('')
+    const [idsalon, setIdsalon] = useState('')
 
     return (
         <div class='profilPageBody'>
@@ -29,7 +30,6 @@ function AddCarPage() {
                                     type='text'
                                     id='brand'
                                     name='brand'
-                                    placeholder='brand'
                                     value={brand}
                                     onChange={(e) => setBrand(e.target.value)}
                                     className='inputSettingForm'
@@ -44,7 +44,6 @@ function AddCarPage() {
                                     type='text'
                                     id='model'
                                     name='model'
-                                    placeholder='model'
                                     value={model}
                                     onChange={(e) => setModel(e.target.value)}
                                     className='inputSettingForm'
@@ -53,17 +52,37 @@ function AddCarPage() {
                         </div>
 
                         <div className='settingFormGroup'>
+                            <label htmlFor='idsalon'>
+                                <p className='pSettingForm'>Salon</p>
+                                <select
+                                    id='idsalon'
+                                    name='idsalon'
+                                    value={idsalon}
+                                    onChange={(e) => setIdsalon(e.target.value)}
+                                    className='selectSettingForm'
+                                >
+                                    <option value='1'>Bydgoszcz</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div className='settingFormGroup'>
                             <label htmlFor='description'>
                                 <p className='pSettingForm'>Opis</p>
-                                <input
+                                <textarea
                                     type='text'
                                     id='description'
                                     name='description'
-                                    placeholder='description'
                                     value={description}
                                     onChange={(e) => setDescription(e.target.value)}
                                     className='inputSettingForm'
                                 />
+                            </label>
+                        </div>
+
+                        <div className='settingFormGroup'>
+                            <label htmlFor='idsalon'>
+                                <input type='file' id='image' name='image'/>
                             </label>
                         </div>
                         
