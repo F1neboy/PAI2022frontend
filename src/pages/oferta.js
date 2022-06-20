@@ -63,9 +63,7 @@ const Oferta = () => {
 				<div className='nextSection'>
 					<h1>Flota</h1>
 					<div className='carGallery'>
-						{carData.map((car) => {
-							;<CarCard availability={car.avaible} title={car.model} price='300.00' img='img passata' />
-						})}
+						g<CarCard availability={carData.avaible} title={carData.model} price='300.00' img='img passata' />
 
 						{/* <CarCard />
 						<CarCard />
