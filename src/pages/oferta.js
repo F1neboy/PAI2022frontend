@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import CarCard from '../components/car/CarCard';
 import NajemDlugoterminowy from '../components/najem/NajemDlugoterminowy'
 import NajemKrotkoterminowy from '../components/najem/NajemKrotkoterminowy'
 import './Page.css';
+import axios from 'axios';
 
 const Oferta = () => {
 
@@ -20,9 +21,31 @@ const Oferta = () => {
     setShowDivKrotko(true)
     setShowDivDlugo(false)
   }
-
+  const fetchData = async () => {
+		axios({
+			url: 'https://car-rent-pai-be.herokuapp.com/api/v1/cars',
+			method: 'get',
+			timeout: 8000,
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json',
+				Authorization: `Bearer ${token}`,
+			},
+		})
+			.then((res) => {
+				console.log(res)
+			})
+			.catch((err) => console.log(err))
+	}
+	useEffect(() => {
+		fetchData()
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
 
   return (
+
+
+    
     <div className='body_page'>
 
       <div className='content_page'>
@@ -45,6 +68,7 @@ const Oferta = () => {
         <div className='nextSection'>
           <h1>Flota</h1>
           <div className='carGallery'>
+
             <CarCard 
               availability={false}
               title='passat b5'
