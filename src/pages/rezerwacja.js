@@ -6,9 +6,6 @@ const Rezerwacja = () => {
 
 	const auth = localStorage.getItem('user')
 	
-	const wyloguj = () => {
-		
-    }
 
 	return (
 		<div className='body_page'>
@@ -19,10 +16,6 @@ const Rezerwacja = () => {
 				auth ? (<p>tak</p>) : (<p>nie</p>) 
 			}
 
-			<button onClick={wyloguj}>
-				click
-			</button>
-			
 		</div>
 	)
 }
