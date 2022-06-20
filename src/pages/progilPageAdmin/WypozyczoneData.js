@@ -23,6 +23,7 @@ const WypozyczoneData = () => {
 			},
 		})
 			.then((res) => {
+                console.log(res.data)
 				setEmployeeInfo(res.data)
 			})
 			.catch((err) => console.log(err))
@@ -52,15 +53,15 @@ const WypozyczoneData = () => {
 				<tbody>
 					{EmployeeInfo.map((item) => (
 						<tr>
-							<td>{item.reservation.id}</td>
-							<td>{item.reservation.startDate}</td>
-                            <td>{item.reservation.endDate}</td>
-                            <td>{item.reservation.expectedEndDate}</td>
-                            <td>{item.reservation.state}</td>
-                            <td>{item.reservation.userReservation}</td>
-                            <td>{item.reservation.carReservation}</td>
-                            <td>{item.reservation.salonStart}</td>
-                            <td>{item.reservation.employeeStart}</td>
+							<td>{item.id}</td>
+							<td>{moment(item.startDate).utc().format('DD-MM-YYYY')}</td>
+                            <td>{moment(item.endDate).utc().format('DD-MM-YYYY')}</td>
+                            <td>{moment(item.expectedEndDate).utc().format('DD-MM-YYYY')}</td>
+                            <td>{item.state}</td>
+                            <td>{item.userReservation.username}</td>
+                            <td>{item.carReservation.model}</td>
+                            <td>{item.salonStart.city}</td>
+                            <td>{item.employeeStart.user.username}</td> 
 						</tr>
 					))}
 				</tbody>
