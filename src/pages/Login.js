@@ -2,13 +2,11 @@ import React, { useState, useRef } from 'react'
 import './Login.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-
 const Login = () => {
 	const errRef = useRef()
 	const [username, setUser] = useState('')
 	const [password, setpassword] = useState('')
 	const [errMsg, setErrMsg] = useState('')
-	const [role, setRole] = useState([])
 
 	const [success, setSuccess] = useState(false)
 
@@ -20,12 +18,15 @@ const Login = () => {
 		axios
 			.post('http://localhost:8080/api/auth/signin', student)
 			.then((res) => {
-				console.log(res)
+
+				localStorage.setItem('token', res.data.accessToken)
+				var value = res.headers["set-cookie"]
+				console.log(value)
+				console.log(res.data)
 				setUser('')
 				setpassword('')
 				setSuccess(true)
-				setRole(res.data.loggedEmployeeId)
-				localStorage.setItem("user", JSON.stringify(res.data))
+				localStorage.setItem('user', JSON.stringify(res.data))
 			})
 			.catch((err) => {
 				if (err.response) {
@@ -38,12 +39,12 @@ const Login = () => {
 					setErrMsg(`${err.response.data.error}`)
 				}
 				errRef.current.focus()
+				// console.log(err)
 			})
 	}
 	return (
 		<>
-			{success ? ( 
-				/* <section>{role === null ?  console.log('tak') : console.log('nie')}</section> */
+			{success ? (
 				<section>
 					{navigate('/')}
 					{window.location.reload()}
