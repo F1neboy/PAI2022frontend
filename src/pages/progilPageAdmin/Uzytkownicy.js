@@ -13,7 +13,10 @@ function Uzytkownicy() {
                     <PersonIcon />
                     Użytkownicy
                 </div>
-                <Users />
+                <div className='sectionProfilPage'>
+                   <Users /> 
+                </div>
+                
             </div>
         </div>
     )

@@ -35,7 +35,7 @@ const Users = () => {
 
 	return (
 		<div className='App'>
-			<table>
+			<table className='customers'>
 				<thead>
 					<tr>
 						<th>ID</th>
