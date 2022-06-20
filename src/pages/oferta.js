@@ -8,6 +8,7 @@ import axios from 'axios'
 const Oferta = () => {
 	const [showDivDlugo, setShowDivDlugo] = useState(false)
 	const [showDivKrotko, setShowDivKrotko] = useState(false)
+	const [carData, setCarData] = useState(false)
 
 	// Wyświetlanie warunków najmu długoterminowego
 	const handleClickDlugo = () => {
@@ -31,7 +32,8 @@ const Oferta = () => {
 			},
 		})
 			.then((res) => {
-				console.log(res)
+				console.log(res.data)
+				setCarData(res.data)
 			})
 			.catch((err) => console.log(err))
 	}
@@ -57,7 +59,7 @@ const Oferta = () => {
 
 					{showDivKrotko && <NajemKrotkoterminowy />}
 				</div>
-
+				{console.log(carData)}
 				<div className='nextSection'>
 					<h1>Flota</h1>
 					<div className='carGallery'>
