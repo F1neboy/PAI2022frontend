@@ -1,27 +1,26 @@
-import React, { useState,useEffect } from 'react'
-import CarCard from '../components/car/CarCard';
+import React, { useState, useEffect } from 'react'
+import CarCard from '../components/car/CarCard'
 import NajemDlugoterminowy from '../components/najem/NajemDlugoterminowy'
 import NajemKrotkoterminowy from '../components/najem/NajemKrotkoterminowy'
-import './Page.css';
-import axios from 'axios';
+import './Page.css'
+import axios from 'axios'
 
 const Oferta = () => {
+	const [showDivDlugo, setShowDivDlugo] = useState(false)
+	const [showDivKrotko, setShowDivKrotko] = useState(false)
 
-  const [showDivDlugo, setShowDivDlugo] = useState(false)
-  const [showDivKrotko, setShowDivKrotko] = useState(false)
+	// Wyświetlanie warunków najmu długoterminowego
+	const handleClickDlugo = () => {
+		setShowDivDlugo(true)
+		setShowDivKrotko(false)
+	}
 
-  // Wyświetlanie warunków najmu długoterminowego
-  const handleClickDlugo = () => {
-    setShowDivDlugo(true)
-    setShowDivKrotko(false)
-  }
-
-  // Wyświetlanie warunków najmu krótkoterminowego
-  const handleClickKrotko = () => {
-    setShowDivKrotko(true)
-    setShowDivDlugo(false)
-  }
-  const fetchData = async () => {
+	// Wyświetlanie warunków najmu krótkoterminowego
+	const handleClickKrotko = () => {
+		setShowDivKrotko(true)
+		setShowDivDlugo(false)
+	}
+	const fetchData = async () => {
 		axios({
 			url: 'https://car-rent-pai-be.herokuapp.com/api/v1/cars',
 			method: 'get',
@@ -29,7 +28,6 @@ const Oferta = () => {
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
-				Authorization: `Bearer ${token}`,
 			},
 		})
 			.then((res) => {
@@ -42,54 +40,38 @@ const Oferta = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
-  return (
+	return (
+		<div className='body_page'>
+			<div className='content_page'>
+				<h1>Oferta</h1>
 
+				<button className='button_oferta' onClick={handleClickDlugo}>
+					Najem długoterminowy
+				</button>
+				<button className='button_oferta' onClick={handleClickKrotko}>
+					Najem krótkoterminowy
+				</button>
 
-    
-    <div className='body_page'>
+				<div>
+					{showDivDlugo && <NajemDlugoterminowy />}
 
-      <div className='content_page'>
-        <h1>Oferta</h1>
-    
-        <button className='button_oferta' onClick={handleClickDlugo}>Najem długoterminowy</button>
-        <button className='button_oferta' onClick={handleClickKrotko}>Najem krótkoterminowy</button>
+					{showDivKrotko && <NajemKrotkoterminowy />}
+				</div>
 
-        <div>
-          {showDivDlugo && (
-            <NajemDlugoterminowy />
-          )}
-
-          {showDivKrotko && (
-            <NajemKrotkoterminowy />
-          )}
-          
-        </div>
-
-        <div className='nextSection'>
-          <h1>Flota</h1>
-          <div className='carGallery'>
-
-            <CarCard 
-              availability={false}
-              title='passat b5'
-              price='300.00'
-              img='img passata'
-            />
-            <CarCard />
-            <CarCard />
-            <CarCard />
-            <CarCard />
-            <CarCard />
-          </div>
-          
-        </div>
-
-      </div>  
-
-    </div>
-
-    
-  )
+				<div className='nextSection'>
+					<h1>Flota</h1>
+					<div className='carGallery'>
+						<CarCard availability={false} title='passat b5' price='300.00' img='img passata' />
+						<CarCard />
+						<CarCard />
+						<CarCard />
+						<CarCard />
+						<CarCard />
+					</div>
+				</div>
+			</div>
+		</div>
+	)
 }
 
 export default Oferta
