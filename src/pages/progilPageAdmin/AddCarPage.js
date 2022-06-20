@@ -3,7 +3,7 @@ import AddIcon from '@mui/icons-material/Add'
 import SidebarAdmin from '../../components/sidebar/SidebarAdmin'
 import axios from 'axios'
 
-const AddCarPage=()=> {
+const AddCarPage = () => {
 	const [model, setModel] = useState('')
 	const [brand, setBrand] = useState('')
 	const [description, setDescription] = useState('')
@@ -19,14 +19,14 @@ const AddCarPage=()=> {
 			description,
 			brand,
 			imageLink: 'null',
-            salon:{
-                id:idsalon
-            },
+			salon: {
+				id: idsalon,
+			},
 			available,
 			carReservation: 'null',
 		}
 		axios
-			.post('http://localhost:8080/api/v1/cars', student,{
+			.post('https://car-rent-pai-be.herokuapp.com/api/v1/cars', student, {
 				headers: {
 					Accept: 'application/json',
 					'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ const AddCarPage=()=> {
 
 	const fetchData = async () => {
 		axios({
-			url: 'http://localhost:8080/api/v1/salons',
+			url: 'https://car-rent-pai-be.herokuapp.com/api/v1/salons',
 			method: 'get',
 			timeout: 8000,
 			headers: {
@@ -59,11 +59,11 @@ const AddCarPage=()=> {
 	}
 	useEffect(() => {
 		fetchData()
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        // eslint-disable-next-line
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line
 	}, [])
 	return (
-         // eslint-disable-next-line
+		// eslint-disable-next-line
 		<div class='profilPageBody'>
 			<SidebarAdmin />
 			<div className='profilPageContainer'>
@@ -120,7 +120,7 @@ const AddCarPage=()=> {
 										setIdsalon(parseInt(e.target.value))
 									}}
 									className='selectSettingForm'>
-                                        <option value={null}>Salon</option>
+									<option value={null}>Salon</option>
 									{salon.map((content) => (
 										<option value={content.id}>{content.city}</option>
 									))}
@@ -144,7 +144,7 @@ const AddCarPage=()=> {
 						<div className='settingFormGroup'>
 							<label htmlFor='description'>
 								<p className='pSettingForm'>Dostępny</p>
-                                <input
+								<input
 									type='checkbox'
 									id='available'
 									name='available'

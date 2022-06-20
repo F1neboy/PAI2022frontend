@@ -33,7 +33,7 @@ const Register = () => {
 
 		console.log(userRegister)
 		axios
-			.post('http://localhost:8080/api/auth/signup', userRegister)
+			.post('https://car-rent-pai-be.herokuapp.com/api/auth/signup', userRegister)
 			.then((res) => {
 				setErrMsg(res.data.message)
 			})

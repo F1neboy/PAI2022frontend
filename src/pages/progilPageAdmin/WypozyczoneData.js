@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import moment from "moment";
+import moment from 'moment'
 
 const WypozyczoneData = () => {
 	// Constructor
@@ -11,9 +11,9 @@ const WypozyczoneData = () => {
 
 	const token = localStorage.getItem('token')
 
-	const fetchData = async() => {
+	const fetchData = async () => {
 		axios({
-			url: 'http://localhost:8080/api/v1/reservations',
+			url: 'https://car-rent-pai-be.herokuapp.com/api/v1/reservations',
 			method: 'get',
 			timeout: 8000,
 			headers: {
@@ -23,7 +23,7 @@ const WypozyczoneData = () => {
 			},
 		})
 			.then((res) => {
-                console.log(res.data)
+				console.log(res.data)
 				setEmployeeInfo(res.data)
 			})
 			.catch((err) => console.log(err))
@@ -32,7 +32,6 @@ const WypozyczoneData = () => {
 		fetchData()
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
-    
 
 	return (
 		<div className='App'>
@@ -41,13 +40,13 @@ const WypozyczoneData = () => {
 					<tr>
 						<th>ID</th>
 						<th>Data wypożyczenia</th>
-                        <th>Data zwrotu</th>
-                        <th>Przewidywana data zwrotu</th>
-                        <th>Stan</th>
-                        <th>Użytkownik</th>
-                        <th>Samochod</th>
-                        <th>Salon</th>
-                        <th>Pracownik</th>
+						<th>Data zwrotu</th>
+						<th>Przewidywana data zwrotu</th>
+						<th>Stan</th>
+						<th>Użytkownik</th>
+						<th>Samochod</th>
+						<th>Salon</th>
+						<th>Pracownik</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -55,13 +54,13 @@ const WypozyczoneData = () => {
 						<tr>
 							<td>{item.id}</td>
 							<td>{moment(item.startDate).utc().format('DD-MM-YYYY')}</td>
-                            <td>{moment(item.endDate).utc().format('DD-MM-YYYY')}</td>
-                            <td>{moment(item.expectedEndDate).utc().format('DD-MM-YYYY')}</td>
-                            <td>{item.state}</td>
-                            <td>{item.userReservation.username}</td>
-                            <td>{item.carReservation.model}</td>
-                            <td>{item.salonStart.city}</td>
-                            <td>{item.employeeStart.user.username}</td> 
+							<td>{moment(item.endDate).utc().format('DD-MM-YYYY')}</td>
+							<td>{moment(item.expectedEndDate).utc().format('DD-MM-YYYY')}</td>
+							<td>{item.state}</td>
+							<td>{item.userReservation.username}</td>
+							<td>{item.carReservation.model}</td>
+							<td>{item.salonStart.city}</td>
+							<td>{item.employeeStart.user.username}</td>
 						</tr>
 					))}
 				</tbody>

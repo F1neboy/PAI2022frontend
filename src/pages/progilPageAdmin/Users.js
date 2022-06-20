@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import moment from "moment";
+import moment from 'moment'
 
 const Users = () => {
 	// Constructor
@@ -11,9 +11,9 @@ const Users = () => {
 
 	const token = localStorage.getItem('token')
 
-	const fetchData = async() => {
+	const fetchData = async () => {
 		axios({
-			url: 'http://localhost:8080/api/v1/employees',
+			url: 'https://car-rent-pai-be.herokuapp.com/api/v1/employees',
 			method: 'get',
 			timeout: 8000,
 			headers: {
@@ -31,7 +31,6 @@ const Users = () => {
 		fetchData()
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
-    
 
 	return (
 		<div className='App'>

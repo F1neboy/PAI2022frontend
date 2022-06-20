@@ -16,7 +16,7 @@ const Login = () => {
 		e.preventDefault()
 		const student = { username, password }
 		axios
-			.post('http://localhost:8080/api/auth/signin', student)
+			.post('https://car-rent-pai-be.herokuapp.com/api/auth/signin', student)
 			.then((res) => {
 
 				localStorage.setItem('token', res.data.accessToken)
