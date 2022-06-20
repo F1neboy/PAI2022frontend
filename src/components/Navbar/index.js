@@ -2,7 +2,6 @@ import React from 'react'
 import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './NavbarElements'
 
 const Navbar = () => {
-
 	const auth = localStorage.getItem('user')
 
 	return (
@@ -13,12 +12,11 @@ const Navbar = () => {
 				</NavLink>
 				<Bars />
 				<NavMenu>
+					<NavLink to='/' activeStyle>
+						Strona główna
+					</NavLink>
 					<NavLink to='/oferta' activeStyle>
 						Oferta
-					</NavLink>
-
-					<NavLink to='/rezerwacaja' activeStyle>
-						Rezerwacja
 					</NavLink>
 
 					<NavLink to='/about' activeStyle>
@@ -29,25 +27,24 @@ const Navbar = () => {
 						Kontakt
 					</NavLink>
 
-					{ auth ? (
+					{auth ? (
 						<NavLink to='/profil' activeStyle>
 							Panel
-						</NavLink>) : 
-						(<></>)
-				}
-
+						</NavLink>
+					) : (
+						<></>
+					)}
 				</NavMenu>
 
-				{ auth ? (
-					<NavBtn> 
+				{auth ? (
+					<NavBtn>
 						<NavBtnLink to='/logout'>Wyloguj</NavBtnLink>
-					</NavBtn>) : (
-
-					<NavBtn> 
-						<NavBtnLink to='/login'>Zaloguj</NavBtnLink>				
-					</NavBtn> )
-				}
-
+					</NavBtn>
+				) : (
+					<NavBtn>
+						<NavBtnLink to='/login'>Zaloguj</NavBtnLink>
+					</NavBtn>
+				)}
 			</Nav>
 		</>
 	)
