@@ -17,7 +17,7 @@ const Login = () => {
 		const student = { username, password }
 		//https://car-rent-pai.herokuapp.com/
 		axios
-			.post('https://car-rent-pai.herokuapp.com//api/auth/signin', student)
+			.post('https://car-rent-pai.herokuapp.com/api/auth/signin', student)
 			.then((res) => {
 				localStorage.setItem('token', res.data.accessToken)
 				var value = res.headers['set-cookie']

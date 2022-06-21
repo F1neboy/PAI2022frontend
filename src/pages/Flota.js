@@ -8,7 +8,7 @@ function Flota() {
 
 	const fetchData = async () => {
 		axios({
-			url: 'https://car-rent-pai.herokuapp.com//api/v1/cars',
+			url: 'https://car-rent-pai.herokuapp.com/api/v1/cars',
 			method: 'get',
 			timeout: 8000,
 			headers: {
