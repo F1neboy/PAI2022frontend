@@ -51,3 +51,16 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+.containerLogout {
+	width: 400px;
+	margin: 180px 180px 250px 180px;
+	padding: 2rem 2rem 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+	border-radius: var(--border-radius);
+	background: #ffffff;
+}
