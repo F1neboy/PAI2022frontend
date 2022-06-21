@@ -13,7 +13,7 @@ const WypozyczoneData = () => {
 
 	const fetchData = async () => {
 		axios({
-			url: 'https://car-rent-pai.herokuapp.com/api/v1/reservations',
+			url: 'https://car-rent-pai-be.herokuapp.com/api/v1/reservations',
 			method: 'get',
 			timeout: 8000,
 			headers: {

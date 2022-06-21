@@ -30,7 +30,7 @@ const AddCarPage = () => {
 		formData.append('car', JSON.stringify(car))
 
 		axios
-			.post('https://car-rent-pai.herokuapp.com/api/v1/cars', formData, {
+			.post('https://car-rent-pai-be.herokuapp.com/api/v1/cars', formData, {
 				headers: {
 					Authorization: `Bearer ${token}`,
 
@@ -47,7 +47,7 @@ const AddCarPage = () => {
 
 	const fetchData = async () => {
 		axios({
-			url: 'https://car-rent-pai.herokuapp.com/api/v1/salons',
+			url: 'https://car-rent-pai-be.herokuapp.com/api/v1/salons',
 			method: 'get',
 			timeout: 8000,
 			headers: {
