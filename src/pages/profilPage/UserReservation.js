@@ -26,7 +26,7 @@ function UserReservation() {
 
             <div className='settingFormGroup'>
               <label htmlFor='idcar'>
-                <p className='pSettingForm'>Salon</p>
+                <p className='pSettingForm'>Samochód</p>
                 <select
                   id='idcar'
                   name='idcar'
@@ -41,7 +41,7 @@ function UserReservation() {
 
             <div className='settingFormGroup'>
               <label htmlFor='idsalon'>
-                <p className='pSettingForm'>Salon</p>
+                <p className='pSettingForm'>Salon wypożyczenia</p>
                 <select
                   id='idsalon'
                   name='idsalon'
@@ -56,7 +56,7 @@ function UserReservation() {
 
             <div className='settingFormGroup'>
               <label htmlFor='idsalonZwrotu'>
-                <p className='pSettingForm'>Zwrot</p>
+                <p className='pSettingForm'>Salon zwrotu</p>
                 <select
                   id='idsalonZwrotu'
                   name='idsalonZwrotu'

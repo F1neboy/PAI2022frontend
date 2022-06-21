@@ -1,3 +1,8 @@
-.najem_content {
-    margin-top: 30px;
+.najemSection {
+    display: flex;
+}
+
+.najemImg{
+    width: 300px;
+    border-radius: 10px;
 }

@@ -19,6 +19,7 @@ import AddCarPage from './pages/progilPageAdmin/AddCarPage'
 import Wypozyczone from './pages/progilPageAdmin/Wypozyczone'
 import Uzytkownicy from './pages/progilPageAdmin/Uzytkownicy'
 import SettingsPgaeAdmin from './pages/progilPageAdmin/SettingsPgaeAdmin'
+import Flota from './pages/Flota'
 
 function App() {
 	return (
@@ -29,6 +30,7 @@ function App() {
 					<Route path='/' exact element={<Home />} />
 					<Route path='/oferta' exact element={<Oferta />} />
 					<Route path='/about' exact element={<AboutUs />} />
+					<Route path='/flota' exact element={<Flota />} />
 					<Route path='/contact-us' exact element={<Contact />} />
 					<Route path='/login' exact element={<Login />} />
 					<Route path='/register' exact element={<Register />} />

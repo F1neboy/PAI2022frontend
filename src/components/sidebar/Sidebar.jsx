@@ -28,7 +28,7 @@ function Sidebar() {
                     <a href='/userReservation'>
                         <div className='ulSidebarContainer'>
                             <DirectionsCarIcon className='iconSidebar' />
-                            <li><span>Rezerwacje</span></li>
+                            <li><span>Zrób rezerwacje</span></li>
                         </div>
                     </a>
 
@@ -37,7 +37,7 @@ function Sidebar() {
                     <a href='/userReservationHistory'>
                     <div className='ulSidebarContainer'>
                         <HistoryIcon className='iconSidebar' />
-                        <li><span>Historia</span></li>
+                        <li><span>Historia rezerwacji</span></li>
                     </div>
                     </a>
                 </ul>
