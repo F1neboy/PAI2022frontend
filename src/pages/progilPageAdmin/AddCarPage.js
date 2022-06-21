@@ -10,27 +10,31 @@ const AddCarPage = () => {
 	const [idsalon, setIdsalon] = useState('')
 	const [salon, setStalon] = useState([])
 	const [available, setAvailable] = useState(true)
+	const [file, setFile] = useState()
 	const token = localStorage.getItem('token')
-
+	function handleChange(event) {
+		setFile(event.target.files[0])
+	}
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		const student = {
-			model,
-			description,
-			brand,
+		const car = {
+			model: model,
+			description: description,
+			brand: brand,
 			imageLink: 'null',
-			salon: {
-				id: idsalon,
-			},
-			available,
-			carReservation: 'null',
+			salon: { id: idsalon },
+			available: available,
 		}
+		const formData = new FormData()
+		formData.append('file', file)
+		formData.append('car', JSON.stringify(car))
+
 		axios
-			.post('https://car-rent-pai-be.herokuapp.com/api/v1/cars', student, {
+			.post('https://car-rent-pai.herokuapp.com//api/v1/cars', formData, {
 				headers: {
-					Accept: 'application/json',
-					'Content-Type': 'application/json',
 					Authorization: `Bearer ${token}`,
+
+					'content-type': 'multipart/form-data',
 				},
 			})
 			.then((res) => {
@@ -43,7 +47,7 @@ const AddCarPage = () => {
 
 	const fetchData = async () => {
 		axios({
-			url: 'https://car-rent-pai-be.herokuapp.com/api/v1/salons',
+			url: 'https://car-rent-pai.herokuapp.com//api/v1/salons',
 			method: 'get',
 			timeout: 8000,
 			headers: {
@@ -62,6 +66,7 @@ const AddCarPage = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 		// eslint-disable-next-line
 	}, [])
+
 	return (
 		// eslint-disable-next-line
 		<div class='profilPageBody'>
@@ -157,7 +162,7 @@ const AddCarPage = () => {
 
 						<div className='settingFormGroup'>
 							<label htmlFor='idsalon'>
-								<input type='file' id='image' name='image' />
+								<input type='file' id='image' name='image' onChange={handleChange} />
 							</label>
 						</div>
 

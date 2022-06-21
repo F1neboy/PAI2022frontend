@@ -13,7 +13,7 @@ const Users = () => {
 
 	const fetchData = async () => {
 		axios({
-			url: 'https://car-rent-pai-be.herokuapp.com/api/v1/employees',
+			url: 'https://car-rent-pai.herokuapp.com//api/v1/employees',
 			method: 'get',
 			timeout: 8000,
 			headers: {

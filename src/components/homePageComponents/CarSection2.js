@@ -30,9 +30,7 @@ function CarSection2() {
 				</div>
 			</div>
 
-			<div className='contenerSection3'>
-				<FormSearch />
-			</div>
+
 
 			<div className='contenerSection4'>
 				<div className='rowSection'>
