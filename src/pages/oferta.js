@@ -8,7 +8,7 @@ import axios from 'axios'
 const Oferta = () => {
 	const [showDivDlugo, setShowDivDlugo] = useState(false)
 	const [showDivKrotko, setShowDivKrotko] = useState(false)
-	const [carData, setCarData] = useState(false)
+	const [carData, setCarData] = useState([])
 
 	// Wyświetlanie warunków najmu długoterminowego
 	const handleClickDlugo = () => {
