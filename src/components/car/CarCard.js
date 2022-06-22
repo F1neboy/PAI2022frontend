@@ -19,4 +19,4 @@ function CarCard({title = 'Title', availability = true, img = 'img', description
   )
 }
 
-export default CarCard
+export default CarCard 

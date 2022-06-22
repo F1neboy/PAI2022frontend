@@ -17,7 +17,7 @@ function Flota() {
 			},
 		})
 			.then((res) => {
-				 console.log(res.data)
+				console.log(res.data)
 				// setCarData(prevState => [...prevState, res.data])
 				setCarData(res.data)
 			})
@@ -40,11 +40,11 @@ function Flota() {
 					{/* {carData.length >
 						0(<CarCard availability={carData.avaible} title={carData.model} price='300.00' img='img passata' />)} */}
 					{carData.map((dataCar) => (
-						<CarCard 
-							availability={dataCar.avaible} 
-							title={dataCar.brand + ' ' + dataCar.model} 
-							img={dataCar.imageLink} 
-							description={dataCar.description} 
+						<CarCard
+							availability={dataCar.avaible}
+							title={dataCar.brand + ' ' + dataCar.model}
+							img={dataCar.imageLink}
+							description={dataCar.description}
 							city={dataCar.salon.city}
 						/>
 					))}
