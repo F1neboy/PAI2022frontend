@@ -9,7 +9,7 @@ function CarCard({title = 'Title', availability = true, img = 'img', price = '10
         <div className='carAvailability'>
             {availability ? <p>Dostępny</p> : <p>Niedostępny</p>}
         </div>
-        <div className='photo'>{img}</div>
+        <div className='photo'><input type="image" img src = {img} alt="photo" /></div>
         <div className='footer'>
             <div className='footer_left'>
                 {price} zł

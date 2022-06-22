@@ -6,7 +6,7 @@ import axios from 'axios'
 function Flota() {
 	const [carData, setCarData] = useState([])
 
-	const fetchData = async () => {
+	const fetchData = () => {
 		axios({
 			url: 'https://car-rent-pai-be.herokuapp.com/api/v1/cars',
 			method: 'get',
@@ -17,7 +17,8 @@ function Flota() {
 			},
 		})
 			.then((res) => {
-				console.log(res.data)
+				// console.log(res.data)
+				// setCarData(prevState => [...prevState, res.data])
 				setCarData(res.data)
 			})
 			.catch((err) => console.log(err))
@@ -34,13 +35,13 @@ function Flota() {
 
 				<div className='carGallery'>
 					{console.log(carData)}
-					<CarCard availability={carData.avaible} title={carData.model} price='300.00' img='img passata' />
+					{/* {carData.map(item=><p>{item.id}</p>)} */}
 
-					{/* <CarCard />
-                    <CarCard />
-                    <CarCard />
-                    <CarCard />
-                    <CarCard /> */}
+					{/* {carData.length >
+						0(<CarCard availability={carData.avaible} title={carData.model} price='300.00' img='img passata' />)} */}
+					{carData.map((dataCar) => (
+						<CarCard availability={dataCar.avaible} title={dataCar.name} price='300.00' img={dataCar.imageLink} />
+					))}
 				</div>
 			</div>
 		</div>

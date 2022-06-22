@@ -23,7 +23,7 @@ const AddCarPage = () => {
 			brand: brand,
 			imageLink: 'null',
 			salon: { id: idsalon },
-			available: available
+			available: available,
 		}
 		const formData = new FormData()
 		formData.append('file', file)
