@@ -23,7 +23,7 @@ const AddCarPage = () => {
 			brand: brand,
 			imageLink: 'null',
 			salon: { id: idsalon },
-			available: available,
+			available: available
 		}
 		const formData = new FormData()
 		formData.append('file', file)
@@ -33,7 +33,6 @@ const AddCarPage = () => {
 			.post('https://car-rent-pai-be.herokuapp.com/api/v1/cars', formData, {
 				headers: {
 					Authorization: `Bearer ${token}`,
-
 					'content-type': 'multipart/form-data',
 				},
 			})
