@@ -11,7 +11,7 @@ const ProfilPage = () => {
 	let isAdmin = false;
 
 	for (var i = 0; i < auth["roles"].length; i++) {
-	  if (auth["roles"][i] == "ROLE_ADMIN") {
+	  if (auth["roles"][i] === "ROLE_EMPLOYEE") {
 		isAdmin = true;
 	  }
 	}

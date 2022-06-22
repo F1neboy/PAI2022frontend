@@ -7,11 +7,11 @@ function CarCard({title = 'Title', availability = true, img = 'img', description
     <div className='carCardBody'>
         <div className='header'>{title}</div>
         <div className='opis'>
-            <a className='opisText'>{description}</a><br />
-            <a className='opisText'>{city}</a>
+            <p className='opisText'>{description}</p><br />
+            <p className='opisText'>{city}</p>
         </div>
         <div className='carAvailability'>
-            {availability ? (<a className='dostepny'>Dostępny</a>) : (<a className='niedostepny'>Niedostępny</a>)}
+            {availability ? (<p className='dostepny'>Dostępny</p>) : (<p className='niedostepny'>Niedostępny</p>)}
         </div>
         <div className='photo'><input type="image" img src = {img} alt="photo" className='carImg' /></div>
 
