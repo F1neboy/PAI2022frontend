@@ -1,4 +1,4 @@
-.carCardBody{
+.carCardBody {
     background-color: rgb(241, 237, 237);
     display: flex;
     flex-direction: column;
@@ -8,45 +8,46 @@
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-bottom: 30px;
+    padding: 7px;
 }
 
-.header{
+.header {
     width: 100%;
     height: 50px;
     text-align: center;
     justify-content: center;
     font-size: 28px;
+    font-weight: 600;
 }
 
-.carAvailability{
-    width: 100%;
+.carAvailability {
     height: 20px;
     text-align: center;
 }
 
-.photo{
+.photo {
     width: 100%;
-    height: 200px;
+    height: 300px;
     float: left;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carImg {
+    height: 190px;
+    width: 100%;
+}
+
+.opis {
     text-align: center;
 }
 
-.footer{
-    
+.opisText {
+    color: black;
 }
 
-.footer_left, .footer_right{
-    height: 50px;
-    width: 50%;
-    float: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
 
 .buttonCarCard {
     font-size: 12px;
@@ -65,4 +66,12 @@
     transition: all 0.2s ease-in-out;
     background: #fff;
     color: #010606;
-  }
+}
+
+.dostepny {
+    color: rgb(38, 133, 38);
+}
+
+.niedostepny {
+    color: rgb(38, 133, 38);
+}
